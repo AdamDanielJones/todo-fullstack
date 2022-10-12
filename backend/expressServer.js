@@ -1,4 +1,3 @@
-const PORT = 8000;
 const { Client } = require('pg');
 const express = require('express');
 const cors = require('cors');
@@ -7,10 +6,11 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('public'))
 
-const config = require('./config.json')[process.env.NODE_ENV || "dev"]
+const config = require('./config')[process.env.NODE_ENV || "production"]
+const PORT = config.port;
 
 const client = new Client({
-  connectionString: config.connectionString
+  connectionString: config.connectionString,
 });
 
 client.connect();
