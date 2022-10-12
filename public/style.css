@@ -1,0 +1,74 @@
+body {
+    margin-left: 0;
+    margin-top: 0;
+    background-image: url("todo_background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(208, 219, 253);
+}
+
+#buttonContainer {
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+.todoButtons {
+  background-color: rgba(230, 222, 197, 0.542);
+  border: 2px solid rgb(0, 34, 33);
+  margin-left:20px;
+  font-weight: bold;
+  border-radius:10px;
+}
+
+#headerContainer {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(116, 187, 238, 0.793);
+    flex-wrap:nowrap;
+}
+.header {
+    display: flex;
+    text-align: left;
+    font-family: cursive;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 15px;
+    margin-left: 5px;
+    background-color: rgb(235, 235, 253);
+}
+
+#resultsContainer {
+    width: 700px;
+    background-color: rgba(197, 230, 226, 0.794);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 30px;
+    border: 3px solid;
+    border-color: black;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .resultCard {
+    width: 450px;
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: cursive;
+    padding-left: 5px;
+    margin-bottom: 5px;
+
+  }
