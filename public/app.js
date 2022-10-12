@@ -3,6 +3,7 @@ let readBtn = document.getElementById('readBtn')
 let createBtn = document.getElementById('createBtn')
 let deleteBtn = document.getElementById('deleteBtn')
 let updateBtn = document.getElementById('updateBtn')
+let url = 'https://todo-api-lyfu.onrender.com'
 
 function readTasks(){
     listOfTasks.innerHTML = "";
@@ -10,7 +11,7 @@ function readTasks(){
     if (!userId){
         alert("Request terminated")
     }else{
-        fetch(`http://localhost:8000/todo/${userId}`)
+        fetch(`${url}/todo/${userId}`)
             .then((data) => data.json())
             .then((tasks) => {
                 tasks.forEach(task => {
@@ -35,7 +36,7 @@ function makeTask(){
     else{
         taskBody.id_users = parseInt(userInputId)
         taskBody.task = userInputTask
-        fetch(`http://localhost:8000/todo/create/${parseInt(userInputId)}`, {
+        fetch(`${url}/todo/create/${parseInt(userInputId)}`, {
         method: "POST",
         headers: {
         'Content-Type': 'application/json'
@@ -55,7 +56,7 @@ function changeTask(){
         alert("Request terminated")
     }else{
         taskBody.task = userInputTask
-        fetch(`http://localhost:8000/todo/update/${parseInt(userInputTaskId)}`, {
+        fetch(`${url}/todo/update/${parseInt(userInputTaskId)}`, {
         method: "PATCH",
         headers: {
         'Content-Type': 'application/json'
@@ -71,7 +72,7 @@ function deleteTask(){
     if(!userInputTaskId){
         alert('Request terminated');
     }else{
-        fetch(`http://localhost:8000/todo/delete/${parseInt(userInputTaskId)}`, {
+        fetch(`${url}/todo/delete/${parseInt(userInputTaskId)}`, {
         method: "DELETE"
         })
         .then(alert('ToDo completed and removed successfully'))
