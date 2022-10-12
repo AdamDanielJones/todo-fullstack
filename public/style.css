@@ -28,6 +28,11 @@ body {
   border-radius:10px;
 }
 
+.todoButtons:hover {
+  width:7em;
+  box-shadow: 10px 10px 8px black;
+}
+
 #headerContainer {
     width: 100%;
     height: 4em;
