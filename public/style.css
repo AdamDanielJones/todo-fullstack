@@ -21,9 +21,9 @@ body {
 }
 
 .todoButtons {
-  background-color: rgba(0, 0, 0, 0.498);
+  background-color: rgba(0, 0, 0, 0.737);
   border: 2px solid rgba(52, 52, 52, 0.713);
-  color: azure;
+  color: rgb(240, 255, 255);
   margin-left:20px;
   font-weight: bold;
   border-radius:10px;
